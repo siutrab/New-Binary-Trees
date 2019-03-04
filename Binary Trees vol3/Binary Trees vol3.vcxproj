@@ -151,7 +151,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Nodes.h" />
     <ClInclude Include="pch.h" />
+    <ClInclude Include="Trees.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Binary Trees vol3.cpp" />
