@@ -1,5 +1,5 @@
 #pragma once
-
+#include "Nodes.h"
 //class BinaryTree
 //{
 //
@@ -9,60 +9,33 @@
 //
 //};
 
-class GuardInterface
-{
-public:
-	Guard();
-	~Guard();
-
-private:
-
-};
-
-class EntranceGuard
-	: public GuardInterface
-{
-public:
-	EntranceGuard();
-	~EntranceGuard();
-
-private:
-
-};
-
-class ExitGuard
-	: public GuardInterface
-{
-public:
-	ExitGuard();
-	~ExitGuard();
-
-private:
-
-};
-
+template<class DataType>
 class Queue
 {
 public:
 	Queue();
 	~Queue();
-
+	bool push();	// Inserts an element at the beginning of queue returns true if succeed
+	bool pop();		// Sends the pointer to the tree, returns true if succeed
+	bool remove()	// Removes an element from queur
 private:
-
+	void reload()	// Sets the queue again (if an element is removed etc.)
 };
 
+template<class DataType>
 class TreeInterface
 {
 public:
-	Tree();
-	~Tree();
+
 
 private:
-
+	EmptyNode<DataType>* EmptyNodePtr;
+	RootNode<DataType>* RootNodePtr;
 };
 
+template<class DataType>
 class TreeLocked
-	: public TreeInterface
+	: public TreeInterface<DataType>
 {
 public:
 	TreeLocked();
@@ -72,8 +45,9 @@ private:
 
 };
 
+template<class DataType>
 class TreeUnlocked
-	:public TreeInterface
+	:public TreeInterface<DataType>
 {
 public:
 	TreeUnlocked();
@@ -83,86 +57,5 @@ private:
 
 };
 
-class TreeEmpty
-	:TreeInterface
-{
-public:
-	TreeEmpty();
-	~TreeEmpty();
 
-private:
-	
-};
 
-class Insert
-{
-public:
-	Insert();
-	~Insert();
-
-private:
-
-};
-
-class Delete
-{
-public:
-	Delete();
-	~Delete();
-
-private:
-
-};
-
-class Find
-{
-public:
-	Find();
-	~Find();
-
-private:
-
-};
-
-class NodeInterface
-{
-public:
-	NodeInterface();
-	~NodeInterface();
-
-protected:
-	
-};
-
-class RootNode
-	: public NodeInterface
-{
-public:
-	RootNode();
-	~RootNode();
-
-private:
-
-};
-
-class EmptyNode
-	: public NodeInterface
-{
-public:
-	EmptyNode();
-	~EmptyNode();
-
-private:
-
-};
-
-class Node
-	: public NodeInterface
-{
-public:
-	Node();
-	~Node();
-
-private:
-
-};

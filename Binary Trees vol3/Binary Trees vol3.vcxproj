@@ -152,7 +152,9 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="BinaryTree.h" />
+    <ClInclude Include="Guard.h" />
     <ClInclude Include="Nodes.h" />
+    <ClInclude Include="Operators.h" />
     <ClInclude Include="pch.h" />
   </ItemGroup>
   <ItemGroup>
